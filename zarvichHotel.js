@@ -163,6 +163,15 @@ zarvich.post('/addNewCategory',(req,res)=>{
 	})
 })
 
+// Post a new contact msg
+zarvich.post('/contactUs',(req,res)=>{
+	console.log(req.body);
+	db.collection('contact').insertOne(req.body,(err,result)=>{
+		if(err) throw err;
+		res.send("Check in Complete")
+	})
+})
+
 // Post a new HomeCarousel
 zarvich.post('/addCarousel',(req,res)=>{
 	console.log(req.body);
