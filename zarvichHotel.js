@@ -65,7 +65,7 @@ zarvich.get('/courses', (req,res)=> {
 //return courses wrt category
     else if(req.query.courseID){
         var courseID = (req.query.courseID)
-        query={_id:(courseID)}
+        query={productCategory:(courseID)}
     }
 
     db.collection('Courses').find(query).toArray((err,result) => {
