@@ -33,7 +33,7 @@ zarvich.get('/Categories', (req,res)=> {
         query={roomtype_id:Number(req.query.id)}
     }
 //return categories wrt category Name
-    else if(req.query.mealnames){
+    else if(req.query.catName){
         var catName = (req.query.catName)
         query={product:(catName)}
     }
